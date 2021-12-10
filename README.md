@@ -1,5 +1,5 @@
 <h1 align=center>
-	<b>Get_next_line</b>
+	<b>Get_next_line 1337's PROJECT : </b>
 </h1>
 
 ---
@@ -10,7 +10,7 @@
 
 </p>
 <p align="center">
-<img src="https://c.tenor.com/YSTuX1eo83gAAAAS/fist-mad.gif" width="350">
+<img src="https://c.tenor.com/YSTuX1eo83gAAAAS/fist-mad.gif" width="300">
 </p>
 
 </h4>
@@ -107,4 +107,11 @@ To compile the program, use these flags:
 ```sh
 gcc -Wall -Wextra -Werror -D BUFFER_SIZE=XX path/to/main_function.c path/to/get_next_line.c path/to/get_next_line_utils.c -I path/to/get_next_line.h 
 ```
+---
+
+</p>
+<p align="center">
+<img src="https://c.tenor.com/_1ZY0sOzXWcAAAAS/porky-pig-thats-all-folks.gif" width="450">
+</p>
+
 ---
