@@ -1,5 +1,5 @@
 <h1 align=center>
-	<b>Get Next Line</b>
+	<b>Get_next_line</b>
 </h1>
 
 ---
@@ -16,7 +16,7 @@
 </h4>
 
 <p align=center>
-	In this repo you will find all the codes developed during the <i>get_next_line</i> project, both <b>mandatory</b>'s part and <b>bonus</b>.
+	In this repo you will find all the codes developed during the <i>get_next_line</i> 1337's project, both <b>mandatory</b>'s part and <b>bonus</b>.
 </p>
 
 ---
@@ -90,7 +90,7 @@ Usage
 Clone this repository in your local computer:
 
 ```sh
-git clone https://github.com/edmarpaulino/get_next_line.git
+git clone https://github.com/ablaamim/Get_Next_Line.git
 ```
 
 To use the library in your code you will need to include the header:
