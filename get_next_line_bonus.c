@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 04:48:01 by ablaamim          #+#    #+#             */
-/*   Updated: 2021/12/10 05:22:50 by ablaamim         ###   ########.fr       */
+/*   Updated: 2021/12/10 05:42:29 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,9 @@
 *	A line is defined by the '\n' character.
 
 *	RETURN VALUES
-*	If the buffer contains a line, the function returns 1; otherwise, 
-*	the function returns 0;
+*	If the buffer contains a line, the function returns 1 [SUCCESS], otherwise, 
+*	the function returns 0 [FAILURE] ;
+
 */
 
 int	ft_is_line(char	*buffer)
@@ -29,16 +30,18 @@ int	ft_is_line(char	*buffer)
 	while (*buffer)
 	{
 		if (*buffer++ == '\n')
-			return (1);
+			return (SUCCESS);
 	}
-	return (0);
+	return (FAILURE);
 }
 
 /*
+
 *	FT_UPDATE_BUFFER
-*	
+
 *	DESCRIPTION
 *	This function updates the static_buffer with the buffer.
+
 */
 
 void	ft_update_buffer(char	**static_buffer, char	**buffer)
@@ -51,14 +54,14 @@ void	ft_update_buffer(char	**static_buffer, char	**buffer)
 }
 
 /*
-*	GET_LINE
-*	
+*	FUNCTION : GET_LINE
+
 *	DESCRIPTION
 *	This function takes the line that contains in static_buffer, and checks
 *	if it has more content after the line, if it does, the function updates the
 *	static_buffer with that content.
 *	A line is defined by the '\n' character.
-*	
+
 *	RETURN VALUES
 *	If static_buffer contains a line, the function returns a pointer with that
 *	line; otherwise, the function returns a pointer to NULL;
@@ -114,7 +117,7 @@ char	*read_file(int	fd, char	**buffer)
 	n = 1;
 	if (!static_buffer[fd])
 		static_buffer[fd] = ft_strdup("");
-	while (!is_line(static_buffer[fd]) && n)
+	while (!ft_is_line(static_buffer[fd]) && n)
 	{
 		n = read(fd, *buffer, BUFFER_SIZE);
 		if (n < 0)
@@ -124,7 +127,7 @@ char	*read_file(int	fd, char	**buffer)
 			return (NULL);
 		}
 		(*buffer)[n] = '\0';
-		att_buffer(&static_buffer[fd], buffer);
+		ft_update_buffer(&static_buffer[fd], buffer);
 	}
 	free(*buffer);
 	*buffer = NULL;

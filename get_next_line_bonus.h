@@ -6,12 +6,14 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 04:54:03 by ablaamim          #+#    #+#             */
-/*   Updated: 2021/12/10 05:24:34 by ablaamim         ###   ########.fr       */
+/*   Updated: 2021/12/10 05:42:59 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_BONUS_H
 # define GET_NEXT_LINE_BONUS_H
+# define SUCCESS 1
+# define FAILURE 0
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42
