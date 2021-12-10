@@ -14,8 +14,6 @@
 
 <div align=center>
 <h2>
-	Final score
-</h2>
 <img src=   alt=edpaulin's 42Project Badge/>
 </div>
 
