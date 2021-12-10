@@ -111,7 +111,7 @@ gcc -Wall -Wextra -Werror -D BUFFER_SIZE=XX path/to/main_function.c path/to/get_
 
 </p>
 <p align="center">
-<img src="https://c.tenor.com/_1ZY0sOzXWcAAAAS/porky-pig-thats-all-folks.gif" width="450">
+<img src="https://c.tenor.com/_1ZY0sOzXWcAAAAC/porky-pig-thats-all-folks.gif" width="450">
 </p>
 
 ---
