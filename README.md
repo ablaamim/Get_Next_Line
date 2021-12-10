@@ -16,7 +16,7 @@
 </h4>
 
 <p align=center>
-	In this repo you will find all the codes developed during the <i>get_next_line</i> 1337's project, both <b>mandatory</b>'s part and <b>bonus</b>.
+	In this repo you will find all the codes developed during the <i>get_next_line</i> 1337's project, both <b>mandatory</b>'s part and <b>bonus</b> part.
 </p>
 
 ---

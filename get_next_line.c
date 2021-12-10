@@ -6,42 +6,42 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 04:47:01 by ablaamim          #+#    #+#             */
-/*   Updated: 2021/12/10 04:47:38 by ablaamim         ###   ########.fr       */
+/*   Updated: 2021/12/10 05:23:22 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
 /*
-*	IS_LINE
-*	
+*	FUNCTION : FT_IS_LINE
+
 *	DESCRIPTION
 *	This function checks if the string in the buffer contains a line.
 *	A line is defined by the '\n' character.
-*	
+
 *	RETURN VALUES
 *	If the buffer contains a line, the function returns 1; otherwise, 
 *	the function returns 0;
 */
 
-int	is_line(char	*buffer)
+int	ft_is_line(char	*buffer)
 {
 	while (*buffer)
 	{
-		if (*(buffer++) == '\n')
+		if (*buffer++ == '\n')
 			return (1);
 	}
 	return (0);
 }
 
 /*
-*	ATT_BUFFER
-*	
+*	FT_UPDATE_BUFFER
+*
 *	DESCRIPTION
 *	This function updates the static_buffer with the buffer.
 */
 
-void	att_buffer(char	**static_buffer, char	**buffer)
+void	ft_update_buffer(char	**static_buffer, char	**buffer)
 {
 	char	*temp;
 

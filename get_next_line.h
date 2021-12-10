@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 04:48:32 by ablaamim          #+#    #+#             */
-/*   Updated: 2021/12/10 04:48:35 by ablaamim         ###   ########.fr       */
+/*   Updated: 2021/12/10 05:23:47 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@
 # include <stdlib.h>
 
 //	get_next_line functions
-int		is_line(char	*buffer);
-void	att_buffer(char	**static_buffer, char	**buffer);
+int		ft_is_line(char	*buffer);
+void	ft_update_buffer(char	**static_buffer, char	**buffer);
 char	*get_line(char	**static_buffer, char	**line);
 char	*read_file(int	fd, char	**buffer);
 char	*get_next_line(int	fd);
