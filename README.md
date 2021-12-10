@@ -61,7 +61,7 @@ without losing the reading thread on each of the descriptors
 The project
 </h2>
 
-### Header files
+### Header files :
 
 - [`get_next_line.h`](get_next_line.h)
 - [`get_next_line_bonus.h`](get_next_line_bonus.h)
@@ -141,11 +141,17 @@ The project
 
 - [`get_next_line`](get_next_line.c)
 
-#### :wrench: MOSTLY LIBFT FUNCTIONS WITH SLIGHT MODIFICATIONS :))
+#### :wrench: Nothing but ibft functions !
 
 - [`get_next_line_utils`](get_next_line_utils.c)
 
-### Bonus
+### Bonus :
+
+• To succeed get_next_line with a single static variable.
+• To be able to manage multiple file descriptors with your get_next_line. For
+example, if the file descriptors 3, 4 and 5 are accessible for reading, then you can
+call get_next_line once on 3, once on 4, once again on 3 then once on 5 etc.
+without losing the reading thread on each of the descriptors.
 
 - [`get_next_line_bonus`](get_next_line_bonus.c)
 - [`get_next_line_utils_bonus`](get_next_line_utils_bonus.c)
