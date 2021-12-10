@@ -2,8 +2,17 @@
 	<b>Get Next Line</b>
 </h1>
 
+---
+
+
 <h4 align=center>
 	Reading a line on a fd is way too tedious
+
+</p>
+<p align="center">
+<img src="https://c.tenor.com/YSTuX1eo83gAAAAS/fist-mad.gif" width="350">
+</p>
+
 </h4>
 
 <p align=center>
@@ -30,6 +39,8 @@ else to read or if an error has occurred it should return NULL.</i>
 <p align=center>
 
 </p>
+
+---
 
 <h3 align=center>
 Bonus
