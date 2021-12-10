@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 03:56:30 by ablaamim          #+#    #+#             */
-/*   Updated: 2021/12/10 10:19:15 by ablaamim         ###   ########.fr       */
+/*   Updated: 2021/12/10 13:36:17 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char	*get_line(char *src, int fd)
 	return (src);
 }
 
-char	*get_next_line(int fd)
+char	*get_next_line_bonus(int fd)
 {
 	char		*line;
 	static char	*next_line[OPEN_MAX];

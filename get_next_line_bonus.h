@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 04:54:03 by ablaamim          #+#    #+#             */
-/*   Updated: 2021/12/10 05:42:59 by ablaamim         ###   ########.fr       */
+/*   Updated: 2021/12/10 13:26:38 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # endif
 
 # ifndef OPEN_MAX
-#  define OPEN_MAX 1024
+# define OPEN_MAX 1024
 # endif
 
 # include <unistd.h>
