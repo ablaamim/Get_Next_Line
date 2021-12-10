@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 04:47:01 by ablaamim          #+#    #+#             */
-/*   Updated: 2021/12/10 05:40:55 by ablaamim         ###   ########.fr       */
+/*   Updated: 2021/12/10 08:13:15 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@
 *	the function returns 0 [FAILURE];
 */
 
-int	ft_is_line(char	*buffer)
+int	ft_is_line(char *buffer)
 {
 	while (*buffer)
 	{
@@ -46,7 +46,7 @@ int	ft_is_line(char	*buffer)
 
 */
 
-void	ft_update_buffer(char	**static_buffer, char	**buffer)
+void	ft_update_buffer(char **static_buffer, char **buffer)
 {
 	char	*temp;
 
@@ -70,7 +70,7 @@ void	ft_update_buffer(char	**static_buffer, char	**buffer)
 
 */
 
-char	*get_line(char	**static_buffer, char	**line)
+char	*get_line(char **static_buffer, char **line)
 {
 	size_t	line_len;
 	char	*new_static_buffer;
@@ -113,7 +113,7 @@ char	*get_line(char	**static_buffer, char	**line)
 *	function will return NULL;
 */
 
-char	*read_file(int	fd, char	**buffer)
+char	*read_file(int fd, char **buffer)
 {
 	static char	*static_buffer = NULL;
 	char		*line;
@@ -148,7 +148,7 @@ char	*read_file(int	fd, char	**buffer)
 *	NULL: nothing else to read or an error occurred.
 */
 
-char	*get_next_line(int	fd)
+char	*get_next_line(int fd)
 {
 	char	*buffer;
 

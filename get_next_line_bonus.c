@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/10 04:48:01 by ablaamim          #+#    #+#             */
-/*   Updated: 2021/12/10 05:42:29 by ablaamim         ###   ########.fr       */
+/*   Created: 2021/12/10 08:10:30 by ablaamim          #+#    #+#             */
+/*   Updated: 2021/12/10 08:18:35 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,20 +95,21 @@ char	*get_line(char	**static_buffer, char	**line)
 }
 
 /*
-*	READ_FILE
-*	
+*	READ_FILE :
+
 *	DESCRIPTION
 *	This function reads a file descriptor with read(2) and checks if the read
 *	buffer has a line, if it doesn't have a line, the static_buffer is updated
 *	with the contents of the buffer.
-*	
-*	RETURN VALUES
+
+*	RETURN VALUES :
+
 *	When the function finds a line or EOF, it returns the get_line function,
 *	otherwise, if the read(2) function fails to read the file descriptor, the
 *	function will return NULL;
 */
 
-char	*read_file(int	fd, char	**buffer)
+char	*read_file(int fd, char **buffer)
 {
 	static char	*static_buffer[OPEN_MAX];
 	char		*line;
@@ -135,13 +136,15 @@ char	*read_file(int	fd, char	**buffer)
 }
 
 /*
-*	GET_NEXT_LINE
-*
-*	DESCRIPTION
+*	GET_NEXT_LINE :
+
+*	DESCRIPTION :
+
 *	Write a function which returns a line read from a
 *	file descriptor.
-*	
-*	RETURN VALUES
+
+*	RETURN VALUES :
+
 *	Read line: correct behavior.
 *	NULL: nothing else to read or an error occurred.
 */

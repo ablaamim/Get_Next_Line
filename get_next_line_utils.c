@@ -6,18 +6,18 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 04:48:55 by ablaamim          #+#    #+#             */
-/*   Updated: 2021/12/10 07:43:25 by ablaamim         ###   ########.fr       */
+/*   Updated: 2021/12/10 08:16:57 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
 /*
-*	FT_STRLEN
-*
+*	FT_STRLEN :
+
 *	DESCRIPTION
 *	The strlen() function computes the length of the string str.
-*
+
 *	RETURN VALUES
 *	The strlen() function returns the number of characters that precede the
 *	terminating NUL character.
@@ -28,20 +28,22 @@ size_t	ft_strlen(const char	*str)
 	size_t	len;
 
 	len = 0;
-	while (str[len])
+	while (*str++)
 		++len;
 	return (len);
 }
 
 /*
-*	FT_STRDUP
+*	FUNCTION : FT_STRDUP
 *
-*	DESCRIPTION
+*	DESCRIPTION :
+
 *	The strdup() function allocates sufficient memory for a copy of the
 *	string str, does the copy, and returns a pointer to it. The pointer may
 *	subsequently be used as an argument to the function free(3).
-*
-*	RETURN VALUES
+
+*	RETURN VALUES :
+
 *	If insufficient memory is available, NULL is returned and errno is set
 *	to ENOMEM.
 */
@@ -60,34 +62,36 @@ char	*ft_strdup(const char	*str)
 }
 
 /*
-*	FT_STRLCPY
-*
-*	DESCRIPTION
+*	FUNCTION : FT_STRLCPY
+
+*	DESCRIPTION :
+
 *	The strlcpy() function copy strings with the same input parameters and
 *	output result as snprintf(3).  It is designed to be safer, more
 *	consistent, and less error prone replacements for the easily misused
 *	function strncpy(3).
-*
+
 *	The strlcpy() take the full size of the destination buffer and
 *	guarantee NUL-termination if there is room.  Note that room for the NUL
 *	should be included in dstsize.
-*
+
 *	The strlcpy() copies up to dest_size - 1 characters from the string src
 *	to dest, NUL-terminating the result if dest_size is not 0.
-*
+
 *	If the src and dest strings overlap, the behavior is undefined.
-*
-*	RETURN VALUES
+
+*	RETURN VALUES :
+
 *	Besides quibbles over the return type (size_t versus int) and signal
 *	handler safety (snprintf(3) is not entirely safe on some systems), the
 *	following two are equivalent:
 *
 *		n = strlcpy(dest, src, len);
 *		n = snprintf(dst, len, "%s", src);
-*
+
 *	Like snprintf(3), the strlcpy() function return the total length of the
 *	string they tried to create, that means the length of src.
-*
+
 *	If the return value is >= dest_size, the output string has been
 *	truncated.  It is the caller's responsibility to handle this.
 */
@@ -109,13 +113,15 @@ size_t	ft_strlcpy(char	*dest, const char	*src, size_t	dest_size)
 }
 
 /*
-*	FT_STRJOIN
-*
-*	DESCRIPTION
+*	 FUNCTION : FT_STRJOIN
+
+*	DESCRIPTION :
+
 *	Allocates (with malloc(3)) and returns a new string, which
 *	is the result of the concatenation of ’str1’ and ’str2’.
-*
-*	RETURN VALUES
+
+*	RETURN VALUES :
+
 *	The new string. NULL if the allocation fails.
 */
 
@@ -138,13 +144,15 @@ char	*ft_strjoin(const char	*str1, const char	*str2)
 }
 
 /*
-*	FT_SUBSTR
+*	FUNCTION : FT_SUBSTR
 *
-*	DESCRIPTION
+*	DESCRIPTION :
+
 *	Allocates (with malloc(3)) and returns a substring from the string ’str’.
 *	The substring begins at index ’start’ and is of maximum size ’len’.
 *
-*	RETURN VALUES
+*	RETURN VALUES :
+
 *	The substring. NULL if the allocation fails.
 */
 
