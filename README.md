@@ -150,7 +150,7 @@ The project
 
 ---
 
-##### This repository contains two versions of get_next_line, both works flawlessly.
+##### :information_source: This repository contains two versions of get_next_line, both works flawlessly.
 
 ---
 
