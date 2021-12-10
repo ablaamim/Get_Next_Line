@@ -141,7 +141,7 @@ The project
 
 - [`get_next_line`](get_next_line.c)
 
-#### :wrench: Nothing but ibft functions !
+#### :wrench: Nothing but libft functions !
 
 - [`get_next_line_utils`](get_next_line_utils.c)
 
