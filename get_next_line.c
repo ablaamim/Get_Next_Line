@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 04:47:01 by ablaamim          #+#    #+#             */
-/*   Updated: 2021/12/10 08:13:15 by ablaamim         ###   ########.fr       */
+/*   Updated: 2021/12/10 09:55:18 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@
 
 *	DESCRIPTION :
 
-	[ LINEAR SEARCH]
+	[LINEAR SEARCH FOR '\n']
 *	This function checks if the string in the buffer contains a line.
 *	A line is defined by the '\n' character.
 
 *	RETURN VALUES :
 
-*	If the buffer contains a line, the function returns 1 [SUCCESS] ; otherwise, 
+*	If the buffer contains a line, the function returns 1 [SUCCESS] ; otherwise,
 *	the function returns 0 [FAILURE];
 */
 
@@ -58,16 +58,17 @@ void	ft_update_buffer(char **static_buffer, char **buffer)
 /*
 *	GET_LINE :
 
-*	DESCRIPTION
+*	DESCRIPTION :
+
 *	This function takes the line that contains in static_buffer, and checks
 *	if it has more content after the line, if it does, the function updates the
 *	static_buffer with that content.
 *	A line is defined by the '\n' character.
 
-*	RETURN VALUES
-*	If static_buffer contains a line, the function returns a pointer with that
-*	line; otherwise, the function returns a pointer to NULL;
+*	RETURN VALUES :
 
+*	If static_buffer contains a line, the function returns a pointer with that
+*	line, otherwise, the function returns a pointer to NULL.
 */
 
 char	*get_line(char **static_buffer, char **line)
@@ -105,12 +106,12 @@ char	*get_line(char **static_buffer, char **line)
 *	This function reads a file descriptor with read(2) and checks if the read
 *	buffer has a line, if it doesn't have a line, the static_buffer is updated
 *	with the contents of the buffer.
-*	
+
 *	RETURN VALUES :
 
 *	When the function finds a line or EOF, it returns the get_line function,
 *	otherwise, if the read(2) function fails to read the file descriptor, the
-*	function will return NULL;
+*	function will return NULL.
 */
 
 char	*read_file(int fd, char **buffer)
