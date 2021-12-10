@@ -141,7 +141,7 @@ The project
 
 - [`get_next_line`](get_next_line.c)
 
-### MOSTLY LIBFT FUNCTIONS WITH SLIGHT MODIFICATIONS :))
+#### :wrench: MOSTLY LIBFT FUNCTIONS WITH SLIGHT MODIFICATIONS :))
 
 - [`get_next_line_utils`](get_next_line_utils.c)
 
