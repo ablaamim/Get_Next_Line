@@ -6,7 +6,7 @@
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 03:56:42 by ablaamim          #+#    #+#             */
-/*   Updated: 2021/12/10 10:18:55 by ablaamim         ###   ########.fr       */
+/*   Updated: 2021/12/10 11:26:43 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@
 #  define BUFFER_SIZE 1024
 # endif
 
-#ifndef OPEN_MAX
-# define OPEN_MAX 1024
-#endif
+# ifndef OPEN_MAX
+#  define OPEN_MAX 1024
+# endif
 
 # include <stdlib.h>
 # include <unistd.h>
