@@ -15,11 +15,14 @@
 /*
 *	FUNCTION : FT_IS_LINE
 
-*	DESCRIPTION
+*	DESCRIPTION :
+
+	[ LINEAR SEARCH]
 *	This function checks if the string in the buffer contains a line.
 *	A line is defined by the '\n' character.
 
-*	RETURN VALUES
+*	RETURN VALUES :
+
 *	If the buffer contains a line, the function returns 1 [SUCCESS] ; otherwise, 
 *	the function returns 0 [FAILURE];
 */
@@ -37,7 +40,7 @@ int	ft_is_line(char	*buffer)
 /*
 *	FUNCTION : FT_UPDATE_BUFFER
 
-*	DESCRIPTION
+*	DESCRIPTION :
 
 *	This function updates the static_buffer with the buffer.
 
@@ -95,14 +98,16 @@ char	*get_line(char	**static_buffer, char	**line)
 }
 
 /*
-*	READ_FILE
+*	FUNCTION : READ_FILE
 *	
-*	DESCRIPTION
+*	DESCRIPTION :
+
 *	This function reads a file descriptor with read(2) and checks if the read
 *	buffer has a line, if it doesn't have a line, the static_buffer is updated
 *	with the contents of the buffer.
 *	
-*	RETURN VALUES
+*	RETURN VALUES :
+
 *	When the function finds a line or EOF, it returns the get_line function,
 *	otherwise, if the read(2) function fails to read the file descriptor, the
 *	function will return NULL;
