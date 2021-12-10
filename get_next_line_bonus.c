@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/10 04:47:01 by ablaamim          #+#    #+#             */
-/*   Updated: 2021/12/10 04:47:38 by ablaamim         ###   ########.fr       */
+/*   Created: 2021/12/10 04:48:01 by ablaamim          #+#    #+#             */
+/*   Updated: 2021/12/10 04:48:16 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 /*
 *	IS_LINE
@@ -28,7 +28,7 @@ int	is_line(char	*buffer)
 {
 	while (*buffer)
 	{
-		if (*(buffer++) == '\n')
+		if (*buffer++ == '\n')
 			return (1);
 	}
 	return (0);
@@ -107,22 +107,28 @@ char	*get_line(char	**static_buffer, char	**line)
 
 char	*read_file(int	fd, char	**buffer)
 {
-	static char	*static_buffer = NULL;
+	static char	*static_buffer[OPEN_MAX];
 	char		*line;
 	ssize_t		n;
 
 	n = 1;
-	if (!static_buffer)
-		static_buffer = ft_strdup("");
-	while (!is_line(static_buffer) && n)
+	if (!static_buffer[fd])
+		static_buffer[fd] = ft_strdup("");
+	while (!is_line(static_buffer[fd]) && n)
 	{
 		n = read(fd, *buffer, BUFFER_SIZE);
+		if (n < 0)
+		{
+			free(buffer);
+			free(static_buffer[fd]);
+			return (NULL);
+		}
 		(*buffer)[n] = '\0';
-		att_buffer(&static_buffer, buffer);
+		att_buffer(&static_buffer[fd], buffer);
 	}
 	free(*buffer);
 	*buffer = NULL;
-	return (get_line(&static_buffer, &line));
+	return (get_line(&static_buffer[fd], &line));
 }
 
 /*
@@ -139,7 +145,7 @@ char	*read_file(int	fd, char	**buffer)
 
 char	*get_next_line(int	fd)
 {
-	char	*buffer;
+	char		*buffer;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);

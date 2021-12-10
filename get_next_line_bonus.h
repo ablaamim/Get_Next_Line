@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: edpaulin <edpaulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/10 04:48:32 by ablaamim          #+#    #+#             */
-/*   Updated: 2021/12/10 04:48:35 by ablaamim         ###   ########.fr       */
+/*   Created: 2021/08/09 15:43:19 by edpaulin          #+#    #+#             */
+/*   Updated: 2021/08/14 15:48:56 by edpaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#ifndef GET_NEXT_LINE_BONUS_H
+# define GET_NEXT_LINE_BONUS_H
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42
 # endif
 
+# ifndef OPEN_MAX
+#  define OPEN_MAX 1024
+# endif
+
 # include <unistd.h>
 # include <stdlib.h>
+# include <limits.h>
 
 //	get_next_line functions
 int		is_line(char	*buffer);
