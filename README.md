@@ -83,67 +83,9 @@ The project
 	NULL: nothing else to read or an error occurred.
 ```
 
-```
-	FUNCTION : FT_IS_LINE
-
-	DESCRIPTION :
-
-	[ LINEAR SEARCH]
-	This function checks if the string in the buffer contains a line.
-	A line is defined by the '\n' character.
-
-	RETURN VALUES :
-
-	If the buffer contains a line, the function returns 1 [SUCCESS] ; otherwise, 
-	the function returns 0 [FAILURE];
-
-```
-
-```
-
-	FUNCTION : READ_FILE
-	
-	DESCRIPTION :
-
-	This function reads a file descriptor with read(2) and checks if the read
-	buffer has a line, if it doesn't have a line, the static_buffer is updated
-	with the contents of the buffer.
-	
-	RETURN VALUES :
-
-	When the function finds a line or EOF, it returns the get_line function,
-	otherwise, if the read(2) function fails to read the file descriptor, the
-	function will return NULL;
-
-```
-
-```
-	FUNCTION : FT_UPDATE_BUFFER
-
-	DESCRIPTION :
-
-	This function updates the static_buffer with the buffer.
-```
-
-```
-	GET_LINE :
-
-	DESCRIPTION
-	This function takes the line that contains in static_buffer, and checks
-	if it has more content after the line, if it does, the function updates the
-	static_buffer with that content.
-	A line is defined by the '\n' character.
-
-	RETURN VALUES
-	If static_buffer contains a line, the function returns a pointer with that
-	line; otherwise, the function returns a pointer to NULL;
-```
-
-- [`get_next_line`](get_next_line.c)
 
 #### :wrench: Nothing but libft functions !
 
-- [`get_next_line_utils`](get_next_line_utils.c)
 
 - [`get_next_line_bonus`](get_next_line_bonus.c)
 - [`get_next_line_utils_bonus`](get_next_line_utils_bonus.c)
