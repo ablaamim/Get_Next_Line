@@ -127,10 +127,3 @@ To compile the program, use these flags:
 gcc -Wall -Wextra -Werror -D BUFFER_SIZE=XX path/to/main_function.c path/to/get_next_line.c path/to/get_next_line_utils.c -I path/to/get_next_line.h 
 ```
 ---
-
-</p>
-<p align="center">
-<img src="https://c.tenor.com/_1ZY0sOzXWcAAAAC/porky-pig-thats-all-folks.gif" width="450">
-</p>
-
----
